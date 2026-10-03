@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guess the Output — Coding Through Games</title>
+<meta name="description" content="Activity 5: Guess the Output. Trace a short program line by line and predict what it displays. Teaches variables and program tracing.">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">&lt;/&gt;</span>
+      <span class="brand-text">
+        <span class="brand-title">Coding Through Games</span>
+        <span class="brand-sub">CEP · B.Sc. CS · Sem V</span>
+      </span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">☰ Menu</button>
+    <nav class="nav" id="site-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="project.html">Project</a>
+      <a href="activities.html">Activities</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="surveys.html">Surveys</a>
+      <a href="resources.html">Documentation</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero" style="padding:2.4rem 0 2rem">
+  <div class="wrap">
+    <span class="hero-tag">Activity 05 of 05 · Variables</span>
+    <h1 style="font-size:clamp(1.5rem,1.1rem+1.6vw,2.1rem)">Guess the Output</h1>
+    <p class="lede">
+      Be the computer. A variable is a labelled box that holds a value — and that value can change while the
+      program runs. Follow each line in order and predict exactly what will be displayed.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="grid grid-3 mb-2">
+      <div class="card card-flat">
+        <div class="icon-badge">🎯</div>
+        <h4>What you will learn</h4>
+        <p class="small mb-0">What a variable is, how its value changes as a program runs, and how to trace a
+          program by hand.</p>
+      </div>
+      <div class="card card-flat">
+        <div class="icon-badge">🕹️</div>
+        <h4>How to play</h4>
+        <p class="small mb-0">Read each program from the first line to the last, keep track of every value, then
+          choose the output you expect.</p>
+      </div>
+      <div class="card card-flat">
+        <div class="icon-badge green">⭐</div>
+        <h4>Use paper</h4>
+        <p class="small mb-0">Write the variable name and cross out the old value each time it changes. Doing
+          this by hand is how professional programmers check their own logic.</p>
+      </div>
+    </div>
+
+    <div class="quiz-shell">
+      <div id="quiz-root" data-activity="guess-output"></div>
+    </div>
+
+    <div class="callout callout-info mt-3">
+      <h4>Why the box has a name</h4>
+      <p class="mb-0">
+        If you had to remember "the number that is currently 16" instead of calling it <code>x</code>, writing
+        a program would be impossible. Giving a value a name lets you talk about it, change it, and compare it
+        with other values — which is the whole foundation of programming.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Understanding it</p>
+      <h2>Variables and tracing, step by step</h2>
+    </div>
+
+    <div class="grid grid-2">
+      <div>
+        <p>
+          Think of a variable as a labelled box on a shelf. <code>set x = 5</code> means: find the box labelled
+          <code>x</code> and put the number 5 inside it. Later, <code>set x = x + 3</code> means: look inside
+          the box, take what is there, add three, and put the result back in the same box.
+        </p>
+        <p>
+          That last line confuses almost everyone at first, because <code>x</code> appears on both sides. It
+          helps to read it as: <em>"work out the right-hand side first, then store the answer in the box on the
+          left."</em> The old value is not lost by accident — it is deliberately replaced.
+        </p>
+        <p class="mb-0">
+          <strong>Tracing</strong> is the name for working through a program by hand in this way, writing down
+          each value as it changes. It is slow, unglamorous, and the single most reliable way to find out why a
+          program is doing something unexpected.
+        </p>
+      </div>
+      <div>
+        <h3>Reading it as a trace table</h3>
+        <p class="small muted">Work through the first question as a programmer would. Write the value of
+          <code>x</code> after each line:</p>
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr><th scope="col">Line</th><th scope="col">Instruction</th><th scope="col" class="num">Value of x</th></tr>
+            </thead>
+            <tbody>
+              <tr><td class="num">1</td><td><code>set x = 5</code></td><td class="num">5</td></tr>
+              <tr><td class="num">2</td><td><code>set x = x + 3</code></td><td class="num">8</td></tr>
+              <tr><td class="num">3</td><td><code>set x = x * 2</code></td><td class="num">16</td></tr>
+              <tr><td class="num">4</td><td><code>print x</code></td><td class="num">displays 16</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="small muted mb-0 mt-2">
+          Making a table like this for every program in the activity is a legitimate strategy — it is not
+          cheating, it is exactly what the activity is teaching.
+        </p>
+      </div>
+    </div>
+
+    <div class="grid grid-2 mt-3">
+      <div class="card">
+        <div class="icon-badge navy">🔢</div>
+        <h4>Numbers and text are handled differently</h4>
+        <p class="small mb-0">
+          Adding two numbers gives their total: 4 + 6 = 10. But "adding" two pieces of text glues them together:
+          <code>"Good" + "Morning"</code> gives <code>"GoodMorning"</code> — and no space appears unless you put
+          one in yourself. Same symbol, two different jobs, decided by what is on either side.
+        </p>
+      </div>
+      <div class="card">
+        <div class="icon-badge navy">🔁</div>
+        <h4>Variables plus loops</h4>
+        <p class="small mb-0">
+          A variable that changes inside a loop is the heart of most useful programs — counting how many
+          students passed, adding up a total, or building a sentence one word at a time. When you can trace
+          both together, you can trace almost any beginner program.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="callout callout-ok">
+      <h4>🎉 You have now met all five core concepts</h4>
+      <p class="mb-0">
+        Sequence, debugging, conditions, repetition and variables — that is the foundation the rest of
+        programming is built on. Every language you will ever meet (Python, Java, JavaScript, C++) is a
+        different way of writing exactly these five things.
+      </p>
+    </div>
+    <div class="pager">
+      <a class="btn btn-outline" href="activity-pattern-detective.html">← Previous: Pattern Detective</a>
+      <a class="btn btn-primary" href="activities.html">All activities →</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>Coding Through Games</h4>
+        <p class="small">
+          A Community Engagement Project for the B.Sc. Computer Science Semester V syllabus of the University
+          of Mumbai, addressing Topic 14: <em>Coding through Games and Activities</em>.
+        </p>
+      </div>
+      <div>
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="project.html">Project Report</a></li>
+          <li><a href="activities.html">Activities</a></li>
+          <li><a href="dashboard.html">Sample Dashboard</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Reference</h4>
+        <ul>
+          <li><a href="surveys.html">Survey Instruments</a></li>
+          <li><a href="resources.html">Documentation</a></li>
+          <li><a href="resources.html#placeholders">Placeholder Checklist</a></li>
+          <li><a href="project.html#references">References</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>CEP Prototype · B.Sc. Computer Science, Semester V · <span data-year>2026</span></span>
+      <span>Sample data is labelled throughout · No field results are fabricated</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/quiz.js"></script>
+</body>
+</html>

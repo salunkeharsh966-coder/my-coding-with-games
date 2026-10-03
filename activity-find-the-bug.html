@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Find the Bug — Coding Through Games</title>
+<meta name="description" content="Activity 2: Find the Bug. Spot the mistake in a short program. Teaches debugging and logical errors to beginners.">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">&lt;/&gt;</span>
+      <span class="brand-text">
+        <span class="brand-title">Coding Through Games</span>
+        <span class="brand-sub">CEP · B.Sc. CS · Sem V</span>
+      </span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">☰ Menu</button>
+    <nav class="nav" id="site-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="project.html">Project</a>
+      <a href="activities.html">Activities</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="surveys.html">Surveys</a>
+      <a href="resources.html">Documentation</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero" style="padding:2.4rem 0 2rem">
+  <div class="wrap">
+    <span class="hero-tag">Activity 02 of 05 · Debugging</span>
+    <h1 style="font-size:clamp(1.5rem,1.1rem+1.6vw,2.1rem)">Find the Bug</h1>
+    <p class="lede">
+      A bug is a mistake in a program. The tricky ones do not stop the program at all — it runs happily and
+      gives you the wrong answer. Your job is to find which line is responsible.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="grid grid-3 mb-2">
+      <div class="card card-flat">
+        <div class="icon-badge">🎯</div>
+        <h4>What you will learn</h4>
+        <p class="small mb-0">That mistakes in programs are findable and fixable, and that finding them is a
+          normal skill — not a sign that you are bad at this.</p>
+      </div>
+      <div class="card card-flat">
+        <div class="icon-badge">🕹️</div>
+        <h4>How to play</h4>
+        <p class="small mb-0">Read a short program, work out which line causes the wrong result, and choose it.
+          The explanation appears straight away.</p>
+      </div>
+      <div class="card card-flat">
+        <div class="icon-badge green">⭐</div>
+        <h4>Tip for scoring well</h4>
+        <p class="small mb-0">Work out what the program <em>should</em> do first, then find where it stops
+          doing that. One question here is deliberately correct — read carefully.</p>
+      </div>
+    </div>
+
+    <div class="quiz-shell">
+      <div id="quiz-root" data-activity="find-the-bug"></div>
+    </div>
+
+    <div class="callout callout-info mt-3">
+      <h4>The word "bug" has a real history</h4>
+      <p class="mb-0">
+        In 1947, engineers working on an early computer found an actual moth trapped inside a relay and taped
+        it into the logbook with the note <em>"first actual case of bug being found"</em>. The name stuck. Every
+        program ever written has contained bugs — professional programmers spend more time finding them than
+        writing new code.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Understanding it</p>
+      <h2>Three kinds of bug you will meet</h2>
+    </div>
+    <div class="grid grid-3">
+      <div class="card">
+        <div class="icon-badge">🚫</div>
+        <h3>Wrong order</h3>
+        <p class="small mb-0">
+          Every step is fine on its own, but they happen in the wrong sequence — like putting the tea bag in
+          after pouring the water. The program usually still runs; the result is just wrong.
+        </p>
+      </div>
+      <div class="card">
+        <div class="icon-badge">➗</div>
+        <h3>Wrong instruction</h3>
+        <p class="small mb-0">
+          A single command does something different from what was intended — subtracting where it should add,
+          or dividing where it should take a remainder.
+        </p>
+      </div>
+      <div class="card">
+        <div class="icon-badge">🎚️</div>
+        <h3>Wrong starting value</h3>
+        <p class="small mb-0">
+          A running total begins at the wrong number, so the answer is out by a fixed amount every single time.
+          These are especially easy to miss.
+        </p>
+      </div>
+    </div>
+
+    <div class="grid grid-2 mt-3">
+      <div>
+        <h3>How programmers actually hunt bugs</h3>
+        <ol class="num-list">
+          <li><strong>Say what the program should do.</strong> You cannot spot a wrong answer if you do not know
+            the right one.</li>
+          <li><strong>Be the computer.</strong> Work through the lines in order, writing down each value as it
+            changes. Most bugs become obvious when the values are written out.</li>
+          <li><strong>Narrow it down.</strong> Halve the program: the bug is either before the middle or after
+            it. Repeat. This is much faster than reading every line many times.</li>
+          <li><strong>Fix one thing at a time.</strong> Change a single line, then run again. Changing several
+            things at once means you no longer know which change fixed it.</li>
+        </ol>
+      </div>
+      <div>
+        <h3>Reading it as real code</h3>
+        <p class="small muted">Here is the second question from this activity written out. The tea bag must go
+          into the cup before the water is poured:</p>
+        <pre><code># wrong order
+pour water into cup
+put tea bag into cup
+
+# correct order
+put tea bag into cup
+pour water into cup</code></pre>
+        <p class="small muted mb-0">
+          Notice that the wrong version is not nonsense — it is a perfectly valid program that makes bad tea.
+          Computers do not know what you <em>meant</em>; they only do what you <em>wrote</em>.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap pager">
+    <a class="btn btn-outline" href="activity-algorithm-maze.html">← Previous: Algorithm Maze</a>
+    <a class="btn btn-primary" href="activity-if-else-challenge.html">Next: If–Else Challenge →</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>Coding Through Games</h4>
+        <p class="small">
+          A Community Engagement Project for the B.Sc. Computer Science Semester V syllabus of the University
+          of Mumbai, addressing Topic 14: <em>Coding through Games and Activities</em>.
+        </p>
+      </div>
+      <div>
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="project.html">Project Report</a></li>
+          <li><a href="activities.html">Activities</a></li>
+          <li><a href="dashboard.html">Sample Dashboard</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Reference</h4>
+        <ul>
+          <li><a href="surveys.html">Survey Instruments</a></li>
+          <li><a href="resources.html">Documentation</a></li>
+          <li><a href="resources.html#placeholders">Placeholder Checklist</a></li>
+          <li><a href="project.html#references">References</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>CEP Prototype · B.Sc. Computer Science, Semester V · <span data-year>2026</span></span>
+      <span>Sample data is labelled throughout · No field results are fabricated</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/quiz.js"></script>
+</body>
+</html>
