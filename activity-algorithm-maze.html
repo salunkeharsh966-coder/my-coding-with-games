@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Algorithm Maze — Coding Through Games</title>
+<meta name="description" content="Activity 1: Algorithm Maze. Build a list of commands and guide the robot to the star. Teaches sequence and algorithms to beginners.">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">&lt;/&gt;</span>
+      <span class="brand-text">
+        <span class="brand-title">Coding Through Games</span>
+        <span class="brand-sub">CEP · B.Sc. CS · Sem V</span>
+      </span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">☰ Menu</button>
+    <nav class="nav" id="site-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="project.html">Project</a>
+      <a href="activities.html">Activities</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="surveys.html">Surveys</a>
+      <a href="resources.html">Documentation</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero" style="padding:2.4rem 0 2rem">
+  <div class="wrap">
+    <span class="hero-tag">Activity 01 of 05 · Sequence</span>
+    <h1 style="font-size:clamp(1.5rem,1.1rem+1.6vw,2.1rem)">Algorithm Maze</h1>
+    <p class="lede">
+      An algorithm is simply a list of steps, written in the right order. In this activity you write that list,
+      press Run, and watch the robot follow it — one step at a time, in exactly the order you chose.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="grid grid-3 mb-2">
+      <div class="card card-flat">
+        <div class="icon-badge">🎯</div>
+        <h4>What you will learn</h4>
+        <p class="small mb-0">That a program is a sequence of steps, and that changing the order changes the
+          result — sometimes completely.</p>
+      </div>
+      <div class="card card-flat">
+        <div class="icon-badge">🕹️</div>
+        <h4>How to play</h4>
+        <p class="small mb-0">Add arrow commands to your list, press Run, and guide the robot from the start
+          tile to the ⭐ without touching a wall.</p>
+      </div>
+      <div class="card card-flat">
+        <div class="icon-badge green">⭐</div>
+        <h4>How to score well</h4>
+        <p class="small mb-0">Fewer commands is better. Match the shortest possible route and you earn all
+          three stars.</p>
+      </div>
+    </div>
+
+    <div class="quiz-shell">
+      <div class="quiz-head">
+        <h2>Build your algorithm</h2>
+        <span class="spacer"></span>
+        <span class="score-chip" title="Levels solved with 2 or more stars">Solved: <b id="maze-solved">0</b> / 3</span>
+      </div>
+      <div class="quiz-body" style="padding:1.2rem">
+        <div id="maze-root" class="maze-layout"></div>
+      </div>
+    </div>
+
+    <div class="callout callout-warn mt-3">
+      <h4>Hitting a wall is not a mistake — it is information</h4>
+      <p class="mb-0">
+        When the robot stops at a wall, the program has told you exactly which step is wrong and roughly where.
+        That is what engineers call <strong>debugging</strong>, and it is the single most common thing
+        programmers do all day. Press <em>Remove last</em>, fix that step, and run again.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Understanding it</p>
+      <h2>Why this is the first thing every programmer learns</h2>
+    </div>
+    <div class="grid grid-2">
+      <div>
+        <p>
+          A computer has no common sense. If you tell it to walk into a wall, it will try to walk into the wall.
+          It does not know that your intention was to go around. Everything a computer does, it does because a
+          human wrote down the steps in an order that works.
+        </p>
+        <p>
+          That ordered list of steps has a name: an <strong>algorithm</strong>. When the list is written in a
+          language the computer understands, it becomes a <strong>program</strong>. The maze shows this without
+          a single line of code, because the arrow buttons <em>are</em> the program.
+        </p>
+        <p class="mb-0">
+          Notice what happens when you put a step in the wrong place. Nothing subtle happens — the robot stops
+          against a wall. That directness is the reason this activity works so well as an introduction: cause
+          and effect are visible in under a second.
+        </p>
+      </div>
+      <div>
+        <h3>Reading it as real code</h3>
+        <p class="small muted">The exact sequence you build in the maze would look like this if it were written
+          as a program. Compare it with the arrow buttons you pressed — it is the same list, in the same order.</p>
+        <pre><code>move right
+move right
+move down
+move right
+move up
+move right
+move right</code></pre>
+        <p class="small muted mb-0">
+          The only difference is the words. Programmers use <code>move()</code> or similar, but the idea —
+          steps, in order, executed one after another — is identical.
+        </p>
+      </div>
+    </div>
+
+    <h3 class="mt-3">Try this before you move on</h3>
+    <ul class="check-list">
+      <li><strong>Deliberately write a wrong sequence.</strong> See how the robot stops at a wall, and work out
+        from that where the wrong step is. This is the debugging skill the next activity uses.</li>
+      <li><strong>Solve a level twice.</strong> First reach the star however you can, then find the route that
+        uses the fewest commands. Under 3 stars, ask yourself which steps were unnecessary.</li>
+      <li><strong>Say "step 1, step 2, step 3" aloud</strong> as the robot moves. Programs run in order, and
+        saying the numbers out loud makes that obvious.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap pager">
+    <a class="btn btn-outline" href="activities.html">← All activities</a>
+    <a class="btn btn-primary" href="activity-find-the-bug.html">Next: Find the Bug →</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>Coding Through Games</h4>
+        <p class="small">
+          A Community Engagement Project for the B.Sc. Computer Science Semester V syllabus of the University
+          of Mumbai, addressing Topic 14: <em>Coding through Games and Activities</em>.
+        </p>
+      </div>
+      <div>
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="project.html">Project Report</a></li>
+          <li><a href="activities.html">Activities</a></li>
+          <li><a href="dashboard.html">Sample Dashboard</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Reference</h4>
+        <ul>
+          <li><a href="surveys.html">Survey Instruments</a></li>
+          <li><a href="resources.html">Documentation</a></li>
+          <li><a href="resources.html#placeholders">Placeholder Checklist</a></li>
+          <li><a href="project.html#references">References</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>CEP Prototype · B.Sc. Computer Science, Semester V · <span data-year>2026</span></span>
+      <span>Sample data is labelled throughout · No field results are fabricated</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/maze.js"></script>
+</body>
+</html>

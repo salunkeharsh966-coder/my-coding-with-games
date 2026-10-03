@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Project Report — Coding Through Games | CEP</title>
+<meta name="description" content="Full CEP project report: problem statement, need assessment, methodology, learning objectives, activity plan, expected outcomes, challenges, recommendations, conclusion and references.">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">&lt;/&gt;</span>
+      <span class="brand-text">
+        <span class="brand-title">Coding Through Games</span>
+        <span class="brand-sub">CEP · B.Sc. CS · Sem V</span>
+      </span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">☰ Menu</button>
+    <nav class="nav" id="site-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="project.html">Project</a>
+      <a href="activities.html">Activities</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="surveys.html">Surveys</a>
+      <a href="resources.html">Documentation</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero" style="padding:2.8rem 0 2.4rem">
+  <div class="wrap">
+    <span class="hero-tag">Project Report</span>
+    <h1 style="font-size:clamp(1.6rem,1.1rem+1.8vw,2.3rem)">Coding Through Games — Full Project Documentation</h1>
+    <p class="lede">
+      The complete academic record of the project: the problem it addresses, why it is needed, how it was
+      planned and carried out, what it expects to achieve, what could go wrong, and what it recommends.
+    </p>
+    <nav class="mt-2" style="display:flex;flex-wrap:wrap;gap:.4rem">
+      <a class="btn btn-ghost btn-sm" href="#problem">Problem</a>
+      <a class="btn btn-ghost btn-sm" href="#need">Need</a>
+      <a class="btn btn-ghost btn-sm" href="#methodology">Methodology</a>
+      <a class="btn btn-ghost btn-sm" href="#objectives">Objectives</a>
+      <a class="btn btn-ghost btn-sm" href="#plan">Activity Plan</a>
+      <a class="btn btn-ghost btn-sm" href="#outcomes">Outcomes</a>
+      <a class="btn btn-ghost btn-sm" href="#challenges">Challenges</a>
+      <a class="btn btn-ghost btn-sm" href="#recommendations">Recommendations</a>
+      <a class="btn btn-ghost btn-sm" href="#conclusion">Conclusion</a>
+      <a class="btn btn-ghost btn-sm" href="#references">References</a>
+    </nav>
+  </div>
+</section>
+
+<!-- ==================== 1. PROBLEM STATEMENT ==================== -->
+<section class="section" id="problem">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Section 1</p>
+      <h2>Problem Statement</h2>
+    </div>
+    <div class="grid grid-2">
+      <div>
+        <p>
+          School students in the Class 6 to Class 9 age band are generally expected to develop some familiarity
+          with computers, yet the way programming is first introduced makes it appear difficult, abstract and
+          reserved for a small group of students who already perform well in mathematics. The problem is not
+          that the students lack ability. It is that the teaching method attaches <strong>syntax</strong> to a
+          concept the student has not yet <strong>experienced</strong>.
+        </p>
+        <p>
+          A typical first lesson asks a beginner to type an instruction like
+          <code>print("Hello")</code> and accept a rule about brackets and quotation marks before they know
+          what a program is or why order matters. Errors appear as messages written for an experienced
+          programmer. Confusion is read as inability. Very quickly the student concludes that coding is "not
+          for them", and that conclusion is usually permanent.
+        </p>
+        <h3>Precise statement of the problem</h3>
+        <div class="callout callout-warn">
+          <p class="mb-0">
+            Beginner-level programming is commonly taught <strong>syntax-first</strong>, which creates an
+            avoidable barrier: students abandon the subject because they meet the <em>notation</em> of coding
+            before its <em>logic</em>, and because mistakes are presented as failures rather than as information.
+          </p>
+        </div>
+      </div>
+      <div>
+        <h3>Manifestations observed in the school context</h3>
+        <ul class="check-list">
+          <li><strong>Fear of the error message.</strong> Students stop experimenting as soon as an error appears,
+            because nothing has taught them that errors are normal and informative.</li>
+          <li><strong>Loss of sequence reasoning.</strong> Students who can describe steps out loud still cannot
+            place them in a correct order when the steps are written down, because nothing has made the order
+            logically necessary.</li>
+          <li><strong>No distinction between ideas.</strong> Repetition, decision-making and storage are all
+            seen as "computers doing things" rather than as three separate, nameable concepts.</li>
+          <li><strong>Confidence gap.</strong> Students who are not already confident in mathematics withdraw
+            from computer activities long before their actual understanding is tested.</li>
+          <li><strong>One-pass teaching.</strong> The subject is taught once and not revisited, so there is no
+            second opportunity for the student who needed more time.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== 2. NEED ASSESSMENT ====================== -->
+<section class="section section-alt" id="need">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Section 2</p>
+      <h2>Need Assessment</h2>
+      <p>Why this project is worth doing in this community, and what evidence determines its shape.</p>
+    </div>
+
+    <div class="grid grid-2">
+      <div class="card">
+        <h3>Educational need</h3>
+        <p>
+          Computational thinking — breaking a task into ordered steps, recognising repetition, and making
+          decisions from conditions — is now a foundational skill across every field the students will enter.
+          Introducing it during the school years is far more effective than repairing the gap later, because
+          at this age the concepts can still be taught as concrete activities rather than as abstractions.
+        </p>
+        <p class="mb-0">
+          The current syllabus teaches computer use, but the reasoning behind programs is not addressed in a way
+          that reaches a mixed-ability classroom.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Community need</h3>
+        <p>
+          The project addresses a school community that has enthusiasm for technology but limited access to
+          specialised teaching resources for programming. A resource that requires no installation, no
+          internet connection and no specialist teacher is directly usable in that setting, and it can be
+          handed over and reused without the project team present.
+        </p>
+        <p class="mb-0">
+          The benefit therefore does not end when the visit ends — the school keeps a working teaching aid.
+        </p>
+      </div>
+    </div>
+
+    <h3 class="mt-3">Assessment of the existing situation</h3>
+    <div class="table-scroll">
+      <table>
+        <caption>Table 2.1 — Gap analysis: what is needed against what currently exists</caption>
+        <thead>
+          <tr>
+            <th scope="col">What the students need</th>
+            <th scope="col">What currently exists</th>
+            <th scope="col">Gap this project fills</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>An experience of a concept before its name</td>
+            <td>Definitions and syntax presented first</td>
+            <td>Five activities that make the concept playable before it is named</td>
+          </tr>
+          <tr>
+            <td>Permission to be wrong</td>
+            <td>Errors presented as failures</td>
+            <td>Instant, explanation-first feedback on every answer</td>
+          </tr>
+          <tr>
+            <td>A second attempt at the same idea</td>
+            <td>Single-pass explanation</td>
+            <td>Restartable activities with no penalty and no time limit</td>
+          </tr>
+          <tr>
+            <td>A resource the teacher can keep using</td>
+            <td>Material tied to one lesson</td>
+            <td>A standalone offline application left with the school</td>
+          </tr>
+          <tr>
+            <td>Confidence for students who are not "good at maths"</td>
+            <td>Maths ability used as a proxy for coding ability</td>
+            <td>Activities that reward careful reasoning, not calculation</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout callout-info mt-3">
+      <h4>How the need was established</h4>
+      <p class="mb-0">
+        The need identified above was established from the syllabus requirements of Topic 14, the project
+        team's review of common beginner difficulties in programming education, and the pre-session survey
+        instrument contained on the <a href="surveys.html">Surveys</a> page. The survey is designed to be
+        completed by students at the start of the session and is the vehicle through which this assessment is
+        <strong>verified against the actual classroom</strong>.
+      </p>
+    </div>
+
+    <div class="ph-block mt-2">
+      <span class="ph-label">Placeholder — requires fieldwork</span>
+      <h4>Confirming the need with the school</h4>
+      <p class="mb-0">
+        Record here, after the pre-session visit: the name of the school and the teacher consulted, the date of
+        the discussion, the number of students expected, and any specific difficulties the teacher reported.
+        The pre-session survey results should be summarised here to show that the need described above matches
+        the actual classroom.
+        <br><span class="ph">[School name]</span> · <span class="ph">[Teacher name &amp; designation]</span> ·
+        <span class="ph">[Date of pre-visit]</span> · <span class="ph">[Number of students]</span> ·
+        <span class="ph">[Summary of teacher's remarks]</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 3. METHODOLOGY ======================= -->
+<section class="section" id="methodology">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Section 3</p>
+      <h2>Methodology</h2>
+      <p>The approach, the session structure, and the method used to measure whether it worked.</p>
+    </div>
+
+    <h3>Approach</h3>
+    <p>
+      The project uses an <strong>activity-based, concept-first</strong> method. Rather than explaining a
+      programming idea and then demonstrating it, each concept is introduced as a game that cannot be won
+      without using the idea. The technical term is supplied only after the student has succeeded, so that
+      the vocabulary names an achievement instead of adding a new thing to memorise.
+    </p>
+
+    <h3 class="mt-3">Session structure — one day / one night prototype</h3>
+    <div class="table-scroll">
+      <table>
+        <caption>Table 3.1 — Session plan</caption>
+        <thead>
+          <tr>
+            <th scope="col">Phase</th>
+            <th scope="col">Activity</th>
+            <th scope="col">Purpose</th>
+            <th scope="col" class="num">Approx. time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1 · Entry</td>
+            <td>Welcome, introduction of the team, explanation of what the session is</td>
+            <td>Reduce nervousness; establish that nobody is being graded</td>
+            <td class="num">10 min</td>
+          </tr>
+          <tr>
+            <td>2 · Baseline</td>
+            <td><a href="surveys.html#pre-survey">Pre-session survey</a> and <a href="surveys.html#pre-test">pre-test</a></td>
+            <td>Establish what students already know and how they feel about coding</td>
+            <td class="num">15 min</td>
+          </tr>
+          <tr>
+            <td>3 · Core</td>
+            <td>The five activities, demonstrated then played in small groups</td>
+            <td>Teach the five concepts through play</td>
+            <td class="num">90 min</td>
+          </tr>
+          <tr>
+            <td>4 · Consolidation</td>
+            <td>Recap of the five concepts by name, with students describing them in their own words</td>
+            <td>Attach vocabulary to the experiences just had</td>
+            <td class="num">15 min</td>
+          </tr>
+          <tr>
+            <td>5 · Measurement</td>
+            <td><a href="surveys.html#post-test">Post-test</a> and <a href="surveys.html#feedback">post-session feedback</a></td>
+            <td>Measure the change and collect improvement suggestions</td>
+            <td class="num">20 min</td>
+          </tr>
+          <tr>
+            <td>6 · Closing</td>
+            <td>Thank-you, handover of the resource, group photograph <span class="ph">[if permitted by school]</span></td>
+            <td>Close the visit and leave the resource usable</td>
+            <td class="num">10 min</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="small muted mt-2">
+      Total contact time ≈ 2 hours 40 minutes. Times are indicative: the Core phase should be extended if the
+      students are engaged, and shortened only as a last resort, since it carries the actual learning.
+    </p>
+
+    <h3 class="mt-3">Delivery method</h3>
+    <div class="grid grid-3">
+      <div class="card card-flat">
+        <div class="icon-badge">👥</div>
+        <h4>Small groups</h4>
+        <p class="small mb-0">
+          Students work in groups of three or four per device. Grouping encourages the verbal reasoning that
+          makes the concepts stick, and it works around a shortage of computers.
+        </p>
+      </div>
+      <div class="card card-flat">
+        <div class="icon-badge">🧑‍🏫</div>
+        <h4>Demonstrate, then hand over</h4>
+        <p class="small mb-0">
+          Each activity is demonstrated once on a shared screen, then played by the students. The team moves
+          between groups and asks questions rather than supplying answers.
+        </p>
+      </div>
+      <div class="card card-flat">
+        <div class="icon-badge">🔁</div>
+        <h4>Repeat without penalty</h4>
+        <p class="small mb-0">
+          Every activity can be restarted freely and nothing is recorded against the student. Students are
+          actively encouraged to try again after a wrong answer.
+        </p>
+      </div>
+    </div>
+
+    <h3 class="mt-3">Measurement method</h3>
+    <p>
+      The project uses a <strong>single-group pre-test / post-test design</strong>. The same short test is
+      administered before and after the session, covering the five concepts. Because the activities themselves
+      record a score, a second, independent measure is available from the practical exercises. The
+      improvements between the two tests are analysed and presented on the <a href="dashboard.html">Dashboard</a>
+      page.
+    </p>
+    <div class="callout callout-warn">
+      <h4>Honest limits of this method</h4>
+      <p class="mb-0">
+        A single-group design cannot fully separate the effect of the activities from the effect of simply
+        having an enthusiastic team visit for the day, and a one-day session cannot show whether the learning
+        lasts. These limits are stated here deliberately, and both are addressed in the
+        <a href="#recommendations">Recommendations</a>.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- =================== 4. LEARNING OBJECTIVES =================== -->
+<section class="section section-alt" id="objectives">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Section 4</p>
+      <h2>Learning Objectives</h2>
+      <p>Written as measurable statements. Each is paired with the activity that delivers it and the evidence
+        that would show it has been met.</p>
+    </div>
+
+    <div class="table-scroll">
+      <table>
+        <caption>Table 4.1 — Learning objectives mapped to activities and evidence</caption>
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">By the end of the session, the student will be able to…</th>
+            <th scope="col">Delivered by</th>
+            <th scope="col">Evidence</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="num">LO1</td>
+            <td>State that a program is a list of steps carried out in a specific order, and arrange a set of
+              steps into a working order</td>
+            <td><a href="activity-algorithm-maze.html">Algorithm Maze</a></td>
+            <td>Reaches the goal; post-test sequence question</td>
+          </tr>
+          <tr>
+            <td class="num">LO2</td>
+            <td>Explain that an error in a program is information to be used, and locate a mistake in a short
+              set of instructions</td>
+            <td><a href="activity-find-the-bug.html">Find the Bug</a></td>
+            <td>Correct bug identification; willingness to retry</td>
+          </tr>
+          <tr>
+            <td class="num">LO3</td>
+            <td>Predict which path a program will take when a rule depends on a condition being true or false</td>
+            <td><a href="activity-if-else-challenge.html">If–Else Challenge</a></td>
+            <td>Branching question in the post-test</td>
+          </tr>
+          <tr>
+            <td class="num">LO4</td>
+            <td>Identify the rule in a repeating pattern and state what comes next</td>
+            <td><a href="activity-pattern-detective.html">Pattern Detective</a></td>
+            <td>Pattern questions correct; verbal explanation of the rule</td>
+          </tr>
+          <tr>
+            <td class="num">LO5</td>
+            <td>Trace a short program by hand and state what it will display</td>
+            <td><a href="activity-guess-output.html">Guess the Output</a></td>
+            <td>Output traced correctly for a program with a changing value</td>
+          </tr>
+          <tr>
+            <td class="num">LO6</td>
+            <td>Describe at least three of the five concepts in their own words using the correct terms</td>
+            <td>Consolidation phase</td>
+            <td>Group recap; post-test vocabulary question</td>
+          </tr>
+          <tr>
+            <td class="num">LO7</td>
+            <td>Approach a new computer activity without the expectation of failure</td>
+            <td>Whole session</td>
+            <td>Post-session feedback on confidence</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== 5. ACTIVITY PLAN ====================== -->
+<section class="section" id="plan">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Section 5</p>
+      <h2>Activity Plan</h2>
+      <p>What each activity teaches, how it is played, and how success is recognised.</p>
+    </div>
+
+    <div class="grid grid-2">
+
+      <article class="card">
+        <div class="icon-badge navy">🧭</div>
+        <h3>1. Algorithm Maze</h3>
+        <p class="small muted"><strong>Concept:</strong> Sequence · algorithms</p>
+        <p>The student builds a list of movement commands and presses Run to make a robot travel through a maze
+          to a goal. If the robot hits a wall the sequence is wrong, and the mistake is visible immediately.</p>
+        <p class="small"><strong>Rules:</strong> Commands are added one at a time; the list can be edited before
+          running; the goal must be reached without touching a wall.</p>
+        <p class="small mb-0"><strong>Scoring:</strong> three stars for the shortest possible route, two for a
+          near-optimal route, one for reaching the goal by any valid route.</p>
+      </article>
+
+      <article class="card">
+        <div class="icon-badge navy">🐞</div>
+        <h3>2. Find the Bug</h3>
+        <p class="small muted"><strong>Concept:</strong> Debugging · logical errors</p>
+        <p>A short program is displayed with a mistake somewhere in it. The student identifies which line is
+          responsible. The programs deliberately include cases where the code runs but produces the wrong answer.</p>
+        <p class="small"><strong>Rules:</strong> One answer per question; the explanation appears immediately
+          after answering; the activity can be restarted at any time.</p>
+        <p class="small mb-0"><strong>Scoring:</strong> one point per correctly identified bug, with the final
+          score expressed as a percentage.</p>
+      </article>
+
+      <article class="card">
+        <div class="icon-badge navy">🔀</div>
+        <h3>3. If–Else Challenge</h3>
+        <p class="small muted"><strong>Concept:</strong> Conditions · decision-making</p>
+        <p>Students are shown a rule and a set of values, and must predict which branch the program will follow.
+          Situations are drawn from everyday school life — a gate that opens above a certain class, a bonus
+          above a certain score.</p>
+        <p class="small"><strong>Rules:</strong> Conditions are checked in order and the first true one wins;
+          the difference between <code>&gt;</code> and <code>&gt;=</code> is explored directly.</p>
+        <p class="small mb-0"><strong>Scoring:</strong> one point per correct prediction with an explanation
+          for each.</p>
+      </article>
+
+      <article class="card">
+        <div class="icon-badge navy">🔍</div>
+        <h3>4. Pattern Detective</h3>
+        <p class="small muted"><strong>Concept:</strong> Loops · repetition</p>
+        <p>Students examine a sequence of numbers or shapes, work out the rule that generates it, and state what
+          comes next. Rules include counting up, counting down, doubling and adding the previous two terms.</p>
+        <p class="small"><strong>Rules:</strong> The explanation rewrites the rule as a loop, connecting the
+          puzzle to how a computer would repeat the work.</p>
+        <p class="small mb-0"><strong>Scoring:</strong> one point per correct next term, with extra credit in
+          discussion for students who can state the rule aloud.</p>
+      </article>
+
+      <article class="card">
+        <div class="icon-badge navy">🖨️</div>
+        <h3>5. Guess the Output</h3>
+        <p class="small muted"><strong>Concept:</strong> Variables · tracing</p>
+        <p>Students follow a short program by hand, keeping track of what is stored in each named value, and
+          predict what will be displayed. Programs include loops that change a value repeatedly.</p>
+        <p class="small"><strong>Rules:</strong> The program is read from first line to last; students are
+          encouraged to use paper to write down each value as it changes.</p>
+        <p class="small mb-0"><strong>Scoring:</strong> one point per correct output, with a line-by-line
+          explanation of the trace.</p>
+      </article>
+
+      <article class="card card-accent">
+        <div class="icon-badge green">📈</div>
+        <h3>Progress and scoring across all five</h3>
+        <p class="small">
+          Each activity records its own score and marks itself complete. Completion across the set is shown as a
+          progress indicator, so a student can see how far through the five they have come and return to a
+          half-finished activity later.
+        </p>
+        <p class="small mb-0">
+          Nothing is uploaded and no personal information is collected — progress is stored only in the browser
+          on the device being used.
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 6. EXPECTED OUTCOMES ==================== -->
+<section class="section section-alt" id="outcomes">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Section 6</p>
+      <h2>Expected Outcomes</h2>
+      <p>What the project expects to observe, and how each outcome would be recognised.</p>
+    </div>
+
+    <div class="grid grid-2">
+      <div class="card">
+        <h3>For the students</h3>
+        <ul class="check-list mb-0">
+          <li>A measurable improvement between pre-test and post-test on the five concepts.</li>
+          <li>The ability to name the five concepts and describe at least three of them in their own words.</li>
+          <li>A visible reduction in hesitation — students attempting an activity without waiting to be told
+            the answer is safe.</li>
+          <li>Students helping each other within their groups, which indicates the concepts have been
+            understood well enough to explain.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>For the school</h3>
+        <ul class="check-list mb-0">
+          <li>A reusable offline resource that needs no installation, no internet and no specialist teacher.</li>
+          <li>A short set of printed instruments the teacher can run again independently.</li>
+          <li>A record of which concepts proved hardest for the participating students, so future teaching can
+            spend longer on them.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>For the project team</h3>
+        <ul class="check-list mb-0">
+          <li>Practical experience of explaining technical material to a non-technical audience.</li>
+          <li>Direct evidence about where beginners get stuck, which is more useful than any prediction.</li>
+          <li>The complete set of artefacts the CEP requires, produced from a real piece of work rather than
+            assembled afterwards.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>What is <em>not</em> claimed</h3>
+        <ul class="mb-0">
+          <li>This project does not claim to teach programming in one session — it introduces five concepts
+            and measures the introduction.</li>
+          <li>It does not claim that students will be able to write independent programs afterwards.</li>
+          <li>It does not claim lasting retention, which a one-day session cannot demonstrate. Testing that
+            would require a follow-up visit, as recommended below.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== 7. CHALLENGES ====================== -->
+<section class="section" id="challenges">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Section 7</p>
+      <h2>Challenges Anticipated</h2>
+      <p>Problems foreseen in advance, together with the mitigation planned for each.</p>
+    </div>
+
+    <div class="table-scroll">
+      <table>
+        <caption>Table 7.1 — Risk register</caption>
+        <thead>
+          <tr>
+            <th scope="col">Challenge</th>
+            <th scope="col">Why it matters</th>
+            <th scope="col">Mitigation planned</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Not enough computers for one per student</td>
+            <td>Some students would only watch, and watching does not teach the reasoning</td>
+            <td>Deliberate small-group rotation so every student operates the device in turn; the group
+              discussion itself reinforces the concept</td>
+          </tr>
+          <tr>
+            <td>Power cut or device failure</td>
+            <td>The core phase would be lost in the middle</td>
+            <td>The site runs entirely offline from a local copy; printed backup versions of all five
+              activities are carried to the session</td>
+          </tr>
+          <tr>
+            <td>Wide variation in student ability</td>
+            <td>Fast students finish and lose interest; slower students feel left behind</td>
+            <td>Every activity is restartable and untimed; early finishers are asked to explain the concept to
+              their group, which keeps them working</td>
+          </tr>
+          <tr>
+            <td>Students worried about being graded</td>
+            <td>Anxiety reduces the willingness to experiment, which is the whole point of the session</td>
+            <td>States clearly at the start that nothing is graded; feedback is phrased around the program
+              being wrong, never the student</td>
+          </tr>
+          <tr>
+            <td>Session runs over time</td>
+            <td>The post-test would be rushed, weakening the measurement</td>
+            <td>The post-test and feedback forms are kept short enough to complete inside fifteen minutes; the
+              core phase is the only part that may be trimmed</td>
+          </tr>
+          <tr>
+            <td>Language barrier in technical terms</td>
+            <td>Words like "variable" and "loop" may be unfamiliar in any language</td>
+            <td>Every term is introduced only after its activity, with an example the students have just
+              experienced, and rephrased in plain language</td>
+          </tr>
+          <tr>
+            <td>Photographs not permitted</td>
+            <td>Documentation expects visual evidence</td>
+            <td>Permission sought in advance; where refused, the report uses diagrams and the signed
+              attendance record instead of images</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="ph-block mt-3">
+      <span class="ph-label">Placeholder — requires fieldwork</span>
+      <h4>Challenges actually encountered</h4>
+      <p class="mb-0">
+        Record after the session which of the challenges above actually occurred, which did not, and any
+        unforeseen difficulty. This section carries more academic weight than the predictions above, because
+        it is evidence rather than expectation.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 8. RECOMMENDATIONS ==================== -->
+<section class="section section-alt" id="recommendations">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Section 8</p>
+      <h2>Recommendations</h2>
+      <p>What should be done differently, and what should be done next.</p>
+    </div>
+
+    <div class="grid grid-2">
+      <div class="card">
+        <h3>For the next session</h3>
+        <ol class="num-list mb-0">
+          <li><strong>Add a follow-up visit.</strong> A second visit two to three weeks later, repeating only
+            the post-test, would show whether the learning lasted — which the current design cannot prove.</li>
+          <li><strong>Use a comparison group.</strong> Running the same test with a class that does not receive
+            the session would separate the effect of the activities from the effect of the visit itself.</li>
+          <li><strong>Collect the hardest concept explicitly.</strong> Ask the teacher which concept the
+            students still seemed unsure about, and record it, so the finding can be shared.</li>
+          <li><strong>Plan for one computer per two students</strong> where possible, and confirm the number
+            of working devices with the school during the pre-visit.</li>
+          <li><strong>Extend the core phase</strong> rather than cutting it if the session is short of time.</li>
+        </ol>
+      </div>
+      <div class="card">
+        <h3>For the school</h3>
+        <ol class="num-list mb-0">
+          <li><strong>Repeat the activities</strong> with the next batch of students — the resource needs no
+            training to run.</li>
+          <li><strong>Use the activities as an introduction</strong> before formal programming lessons, so
+            that the vocabulary arrives after the experience.</li>
+          <li><strong>Keep a printed copy</strong> of the survey instruments, so the exercise can be run even
+            without devices.</li>
+          <li><strong>Encourage group work</strong> rather than one student per device — the discussion is
+            where most of the learning happens.</li>
+        </ol>
+      </div>
+      <div class="card">
+        <h3>For the resource itself</h3>
+        <ol class="num-list mb-0">
+          <li>Add more levels to the Algorithm Maze for students who finish quickly.</li>
+          <li>Provide a printable paper version of every activity for schools without devices.</li>
+          <li>Support a second language for the instructions, so terms are explained in the students' own
+            language before the English term is given.</li>
+          <li>Add a teacher view that shows which questions the class found hardest, using anonymous counts.</li>
+        </ol>
+      </div>
+      <div class="card">
+        <h3>For the CEP process</h3>
+        <ol class="num-list mb-0">
+          <li>Fix the field session date early enough to allow a pre-visit, so the need assessment is based on
+            the actual school rather than on general assumptions.</li>
+          <li>Obtain written permission for photographs before the visit, not on the day.</li>
+          <li>Enter all real data into the placeholders in the same week as the visit, while the details are
+            still accurate.</li>
+          <li>Keep the survey responses in a single numbered file, matched to the pre-test by an anonymous
+            code rather than by name, so individuals cannot be identified.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== 9. CONCLUSION ====================== -->
+<section class="section" id="conclusion">
+  <div class="wrap wrap-narrow">
+    <div class="section-head">
+      <p class="eyebrow">Section 9</p>
+      <h2>Conclusion</h2>
+    </div>
+    <p>
+      This project set out to test a simple proposition: that beginners struggle with programming not because
+      the ideas are too difficult, but because the ideas are usually presented in the wrong order. By placing
+      the experience of sequence, debugging, conditions, repetition and variables before their names, the five
+      activities in this project give students something to succeed at first and a vocabulary second.
+    </p>
+    <p>
+      The result is a complete, offline-capable learning resource that a school can keep and reuse, together
+      with the instruments needed to measure whether it works. The measurement design is deliberately modest
+      about what it can prove: it shows whether understanding improved across a single session, and it does
+      not pretend to show that the learning persisted or that it would generalise to another classroom. Those
+      limits are stated openly because a project that overstates its evidence is worth less than one that
+      reports honestly what it found.
+    </p>
+    <p class="mb-0">
+      What the project demonstrates beyond doubt is that the barrier beginners face is pedagogical rather
+      than intellectual — and that it can be lowered with a maze, a bug hunt and a pattern puzzle. That is a
+      finding small enough to be true and useful enough to be acted on, which is precisely what the
+      Community Engagement Project asks of its students.
+    </p>
+
+    <div class="callout callout-info mt-3">
+      <h4>Status of the results in this prototype</h4>
+      <p class="mb-0">
+        This is a one-day/one-night prototype. The activities, instruments and analysis format are complete
+        and functional. The <a href="dashboard.html">Dashboard</a> shows how the findings will be presented,
+        using clearly-labelled sample figures. Real results must be entered after an actual field visit, in the
+        placeholders marked throughout this site.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 10. REFERENCES ======================= -->
+<section class="section section-alt" id="references">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Section 10</p>
+      <h2>References &amp; Further Reading</h2>
+      <p>Sources used in planning the activities and the session design. Entries follow a standard
+        author–title–publisher format suitable for a college submission; insert the exact edition and year of
+        the copies you consult.</p>
+    </div>
+
+    <div class="grid grid-2">
+      <div class="card">
+        <h3>Programming education &amp; computational thinking</h3>
+        <ol class="small">
+          <li>Wing, J. M. — <em>Computational Thinking</em>. Communications of the ACM, Vol. 49, No. 3.</li>
+          <li>Papert, S. — <em>Mindstorms: Children, Computers, and Powerful Ideas</em>. Basic Books.</li>
+          <li>Resnick, M. — <em>Lifelong Kindergarten: Cultivating Creativity through Projects, Passion,
+            Peers, and Play</em>. MIT Press.</li>
+          <li>Grover, S. &amp; Pea, R. — <em>Computational Thinking in K–12: A Review of the State of the
+            Field</em>. Educational Researcher, Vol. 42, No. 1.</li>
+          <li>Sweller, J. — <em>Cognitive Load During Problem Solving: Effects on Learning</em>. Cognitive
+            Science, Vol. 12, No. 2.</li>
+        </ol>
+      </div>
+      <div class="card">
+        <h3>Curriculum &amp; community engagement</h3>
+        <ol class="small">
+          <li>University of Mumbai — <em>B.Sc. Computer Science, Semester V syllabus</em>: Community
+            Engagement Project guidelines.</li>
+          <li>University of Mumbai — <em>CEP topic list</em>, Topic 14: Coding through Games and Activities.</li>
+          <li>National Education Policy 2020 — sections on experiential learning and integration of
+            computational thinking in school education.</li>
+          <li>NCERT — <em>Guidelines for Activity-Based Learning</em>.</li>
+          <li>Bringle, R. G. &amp; Hatcher, J. A. — <em>A Service-Learning Curriculum for Faculty</em>.
+            Michigan Journal of Community Service Learning.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="ph-block mt-3">
+      <span class="ph-label">Placeholder — to be completed by the student</span>
+      <h4>Complete the citation details</h4>
+      <p class="mb-0">
+        Add the year of publication, edition and page numbers for the copies actually consulted, and insert any
+        additional sources used for the subject-specific content. If a textbook prescribed for the semester was
+        used, cite it here in full.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap pager">
+    <a class="btn btn-outline" href="index.html">← Home</a>
+    <a class="btn btn-primary" href="activities.html">Next: The five activities →</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>Coding Through Games</h4>
+        <p class="small">
+          A Community Engagement Project for the B.Sc. Computer Science Semester V syllabus of the University
+          of Mumbai, addressing Topic 14: <em>Coding through Games and Activities</em>.
+        </p>
+      </div>
+      <div>
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="project.html">Project Report</a></li>
+          <li><a href="activities.html">Activities</a></li>
+          <li><a href="dashboard.html">Sample Dashboard</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Reference</h4>
+        <ul>
+          <li><a href="surveys.html">Survey Instruments</a></li>
+          <li><a href="resources.html">Documentation</a></li>
+          <li><a href="resources.html#placeholders">Placeholder Checklist</a></li>
+          <li><a href="project.html#references">References</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>CEP Prototype · B.Sc. Computer Science, Semester V · <span data-year>2026</span></span>
+      <span>Sample data is labelled throughout · No field results are fabricated</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

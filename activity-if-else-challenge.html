@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>If–Else Challenge — Coding Through Games</title>
+<meta name="description" content="Activity 3: If-Else Challenge. Predict which path a program takes when a rule depends on a condition. Teaches conditions and decision-making.">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">&lt;/&gt;</span>
+      <span class="brand-text">
+        <span class="brand-title">Coding Through Games</span>
+        <span class="brand-sub">CEP · B.Sc. CS · Sem V</span>
+      </span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">☰ Menu</button>
+    <nav class="nav" id="site-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="project.html">Project</a>
+      <a href="activities.html">Activities</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="surveys.html">Surveys</a>
+      <a href="resources.html">Documentation</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero" style="padding:2.4rem 0 2rem">
+  <div class="wrap">
+    <span class="hero-tag">Activity 03 of 05 · Conditions</span>
+    <h1 style="font-size:clamp(1.5rem,1.1rem+1.6vw,2.1rem)">If–Else Challenge</h1>
+    <p class="lede">
+      Every program that makes a decision uses a condition: "if this is true, do this; otherwise do that".
+      Read each rule and predict which path the program will actually take.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="grid grid-3 mb-2">
+      <div class="card card-flat">
+        <div class="icon-badge">🎯</div>
+        <h4>What you will learn</h4>
+        <p class="small mb-0">How a program chooses between two paths, and why checking the conditions in the
+          right order matters so much.</p>
+      </div>
+      <div class="card card-flat">
+        <div class="icon-badge">🕹️</div>
+        <h4>How to play</h4>
+        <p class="small mb-0">Read the rule and the values, work out whether each condition is true or false,
+          then choose the message that will appear.</p>
+      </div>
+      <div class="card card-flat">
+        <div class="icon-badge green">⭐</div>
+        <h4>The trap to watch for</h4>
+        <p class="small mb-0">The difference between <code>&gt;</code> (greater than) and <code>&gt;=</code>
+          (greater than or equal to). One question here turns entirely on that difference.</p>
+      </div>
+    </div>
+
+    <div class="quiz-shell">
+      <div id="quiz-root" data-activity="if-else-challenge"></div>
+    </div>
+
+    <div class="callout callout-warn mt-3">
+      <h4>Conditions are checked from the top down, and the first true one wins</h4>
+      <p class="mb-0">
+        This is the single most important rule in the activity. In a list of <code>if</code> /
+        <code>else if</code> / <code>else</code> branches, the program checks each condition in order and stops
+        at the first one that is true. Everything after it is skipped — even if it would also have been true.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Understanding it</p>
+      <h2>How a program makes a decision</h2>
+    </div>
+
+    <div class="grid grid-2">
+      <div>
+        <p>
+          A condition is a question with only two possible answers: <strong>true</strong> or
+          <strong>false</strong>. "Is the score greater than 50?" is either true or it is false — there is no
+          third answer and no "maybe".
+        </p>
+        <p>
+          Real life is full of these. "If it is raining, take an umbrella — otherwise, do not." A program
+          written with <strong>if–else</strong> does exactly that: it picks one of two paths and ignores the
+          other completely.
+        </p>
+        <p class="mb-0">
+          Where beginners usually slip is not the idea but the exact wording of the question. Asking "is the
+          score more than 50?" and asking "is the score 50 or more?" sound almost identical in everyday speech,
+          but they give different answers when the score is exactly 50 — and a program will happily follow
+          whichever version you actually wrote.
+        </p>
+      </div>
+      <div>
+        <h3>Reading it as real code</h3>
+        <p class="small muted">The vending machine question from this activity, in full:</p>
+        <pre><code>money = 20
+
+if money &gt;= 30:
+    print("Chips")
+else if money &gt;= 15:
+    print("Biscuit")
+else:
+    print("Not enough money")</code></pre>
+        <p class="small muted mb-0">
+          With money = 20: the first question (20 ≥ 30?) is false, so the program moves on. The second question
+          (20 ≥ 15?) is true, so it prints "Biscuit" and stops. It never even looks at the third branch.
+        </p>
+      </div>
+    </div>
+
+    <h3 class="mt-3">The two joining words: AND and OR</h3>
+    <div class="grid grid-2">
+      <div class="card">
+        <div class="icon-badge navy">➕</div>
+        <h4>AND — both must be true</h4>
+        <p class="small mb-0">
+          "Unlock the chapter if the subject is a quiz <strong>and</strong> attendance is at least 75%." If
+          either part is false, the whole condition is false. AND is strict.
+        </p>
+      </div>
+      <div class="card">
+        <div class="icon-badge navy">🔀</div>
+        <h4>OR — only one needs to be true</h4>
+        <p class="small mb-0">
+          "Open the library if it is Saturday <strong>or</strong> Sunday." Because only one part needs to be
+          true, OR can accidentally let through cases you did not intend. OR is generous — sometimes too
+          generous.
+        </p>
+      </div>
+    </div>
+
+    <div class="callout callout-info mt-3">
+      <h4>Where this appears in everyday technology</h4>
+      <p class="mb-0">
+        A traffic signal that changes because a sensor says a car is waiting, a game that unlocks a level above
+        a certain score, a phone that refuses to send a message when the battery is below 5% — every one of
+        them is an if–else in action. Once you can read these conditions, you can see the logic underneath
+        half the technology you use.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap pager">
+    <a class="btn btn-outline" href="activity-find-the-bug.html">← Previous: Find the Bug</a>
+    <a class="btn btn-primary" href="activity-pattern-detective.html">Next: Pattern Detective →</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>Coding Through Games</h4>
+        <p class="small">
+          A Community Engagement Project for the B.Sc. Computer Science Semester V syllabus of the University
+          of Mumbai, addressing Topic 14: <em>Coding through Games and Activities</em>.
+        </p>
+      </div>
+      <div>
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="project.html">Project Report</a></li>
+          <li><a href="activities.html">Activities</a></li>
+          <li><a href="dashboard.html">Sample Dashboard</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Reference</h4>
+        <ul>
+          <li><a href="surveys.html">Survey Instruments</a></li>
+          <li><a href="resources.html">Documentation</a></li>
+          <li><a href="resources.html#placeholders">Placeholder Checklist</a></li>
+          <li><a href="project.html#references">References</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>CEP Prototype · B.Sc. Computer Science, Semester V · <span data-year>2026</span></span>
+      <span>Sample data is labelled throughout · No field results are fabricated</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/quiz.js"></script>
+</body>
+</html>

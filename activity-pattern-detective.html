@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pattern Detective — Coding Through Games</title>
+<meta name="description" content="Activity 4: Pattern Detective. Find the rule in a repeating sequence and work out what comes next. Teaches loops and repetition.">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">&lt;/&gt;</span>
+      <span class="brand-text">
+        <span class="brand-title">Coding Through Games</span>
+        <span class="brand-sub">CEP · B.Sc. CS · Sem V</span>
+      </span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">☰ Menu</button>
+    <nav class="nav" id="site-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="project.html">Project</a>
+      <a href="activities.html">Activities</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="surveys.html">Surveys</a>
+      <a href="resources.html">Documentation</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero" style="padding:2.4rem 0 2rem">
+  <div class="wrap">
+    <span class="hero-tag">Activity 04 of 05 · Loops</span>
+    <h1 style="font-size:clamp(1.5rem,1.1rem+1.6vw,2.1rem)">Pattern Detective</h1>
+    <p class="lede">
+      Computers are wonderful at doing the same thing over and over without getting bored. Find the rule hiding
+      in each pattern, and you have just found the thing a loop repeats.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="grid grid-3 mb-2">
+      <div class="card card-flat">
+        <div class="icon-badge">🎯</div>
+        <h4>What you will learn</h4>
+        <p class="small mb-0">How to spot a repeating rule, and how that rule becomes a loop in a program —
+          one instruction that runs many times.</p>
+      </div>
+      <div class="card card-flat">
+        <div class="icon-badge">🕹️</div>
+        <h4>How to play</h4>
+        <p class="small mb-0">Look at the sequence, work out how one term leads to the next, and choose what
+          belongs in the following position.</p>
+      </div>
+      <div class="card card-flat">
+        <div class="icon-badge green">⭐</div>
+        <h4>Ask two questions</h4>
+        <p class="small mb-0">"How much does it change each time?" and "is it adding, or multiplying?" Add and
+          multiply give very different answers after a few steps.</p>
+      </div>
+    </div>
+
+    <div class="quiz-shell">
+      <div id="quiz-root" data-activity="pattern-detective"></div>
+    </div>
+
+    <div class="callout callout-info mt-3">
+      <h4>Why a loop saves so much work</h4>
+      <p class="mb-0">
+        Imagine printing the numbers 1 to 1000. Writing a thousand instructions is not just boring — it is
+        error-prone, and impossible to change if you decide you wanted 1 to 2000 instead. A loop does the same
+        job in three lines, and changing one number updates the whole thing.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Understanding it</p>
+      <h2>From a pattern to a loop</h2>
+    </div>
+
+    <div class="grid grid-2">
+      <div>
+        <p>
+          A pattern is a rule that produces a series. Once you can state the rule in words — "start at 2 and
+          keep adding 2" — you have written a loop, just not in a programming language yet.
+        </p>
+        <p class="mb-0">
+          Loops matter because computers do not get tired. A task that would take a person a week of repetitive
+          work takes a computer a fraction of a second, and the computer will not lose concentration on
+          repetition number 9,000. Almost everything useful a computer does — searching, sorting, counting,
+          drawing — is a loop somewhere underneath.
+        </p>
+      </div>
+      <div>
+        <h3>Reading it as real code</h3>
+        <p class="small muted">Three of the patterns from this activity written as loops. Notice that the rule
+          you spotted <em>is</em> the loop:</p>
+        <pre><code># 2, 4, 6, 8, 10  — add 2 each time
+for n = 2 to 20 step 2:
+    print n
+
+# 20, 17, 14, 11  — subtract 3 each time
+for n = 20 down to 2 step -3:
+    print n
+
+# 3, 6, 12, 24  — double each time
+set n = 3
+repeat 4 times:
+    print n
+    set n = n * 2</code></pre>
+      </div>
+    </div>
+
+    <h3 class="mt-3">Patterns are everywhere</h3>
+    <div class="grid grid-3">
+      <div class="card card-flat">
+        <div class="icon-badge">🌻</div>
+        <h4>In nature</h4>
+        <p class="small mb-0">
+          The number of petals on many flowers, the spirals in a pine cone and the arrangement of seeds in a
+          sunflower all follow the same sequence used in question 4 of this activity.
+        </p>
+      </div>
+      <div class="card card-flat">
+        <div class="icon-badge">🎵</div>
+        <h4>In music</h4>
+        <p class="small mb-0">
+          A repeating drum rhythm is a loop. A chorus that comes back after each verse is a loop with an exit
+          condition. Music software literally calls these sections "loops".
+        </p>
+      </div>
+      <div class="card card-flat">
+        <div class="icon-badge">📐</div>
+        <h4>In art</h4>
+        <p class="small mb-0">
+          A tile design that repeats across a floor, or a border that runs around a page, is a pattern generated
+          by repeating a single shape — exactly what the last question in this activity asks about.
+        </p>
+      </div>
+    </div>
+
+    <div class="callout callout-warn mt-3">
+      <h4>Careful: the most common mistake</h4>
+      <p class="mb-0">
+        With a pattern like 3, 6, 12, 24 it is tempting to add 3 and answer 27. But 3 → 6 is also "add 3" and
+        6 → 12 is "add 6", so adding does not hold. The rule is multiplying by 2, giving 48. Always test your
+        guessed rule on <strong>at least two steps</strong> before committing to it.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap pager">
+    <a class="btn btn-outline" href="activity-if-else-challenge.html">← Previous: If–Else Challenge</a>
+    <a class="btn btn-primary" href="activity-guess-output.html">Next: Guess the Output →</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>Coding Through Games</h4>
+        <p class="small">
+          A Community Engagement Project for the B.Sc. Computer Science Semester V syllabus of the University
+          of Mumbai, addressing Topic 14: <em>Coding through Games and Activities</em>.
+        </p>
+      </div>
+      <div>
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="project.html">Project Report</a></li>
+          <li><a href="activities.html">Activities</a></li>
+          <li><a href="dashboard.html">Sample Dashboard</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Reference</h4>
+        <ul>
+          <li><a href="surveys.html">Survey Instruments</a></li>
+          <li><a href="resources.html">Documentation</a></li>
+          <li><a href="resources.html#placeholders">Placeholder Checklist</a></li>
+          <li><a href="project.html#references">References</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>CEP Prototype · B.Sc. Computer Science, Semester V · <span data-year>2026</span></span>
+      <span>Sample data is labelled throughout · No field results are fabricated</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/quiz.js"></script>
+</body>
+</html>
